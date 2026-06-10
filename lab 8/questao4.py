@@ -1,14 +1,9 @@
-
-import random # essa deve ser a primeira linha do código
-chances = 5 
-numero = random.randint(1, 10)
-while chances > 0:
-    n = int(input(f"qual numero voce escolhe? (voce tem {chances} tentativas)  "))
-    chances -= 1
-    if n == numero:
-        print("voce acertou!")
-        break
-print("o numero certo era:", numero)
-
-
-
+soma = 0
+while True:
+  n = int(input("digite um numero para somar: "))
+  if n < 0:
+      continue
+  soma += n 
+  if soma > 100 or n == 0:
+      break 
+print("a soma dos numeros que voce digitou e: ", soma)   

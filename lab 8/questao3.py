@@ -1,10 +1,13 @@
+
+import random
+secreto = random.randint(1, 10)
 chances = 5
-palavra_secreta = 'batata'
-while chances > 0: 
-    palavra = input(f"Qual a palavra secreta? Você tem {chances} chances  ")
+
+while chances > 0:
+    palpite = int(input("Adivinhe o número (1 a 10): "))
+    if palpite > 10:
+        continue
     chances -= 1
-    if palavra == 'batata':
-        print("Você acertou a palavra, toma aqui uma batata 🥔")
+    if palpite == secreto:
+        print("voce acertou!")
         break
-#quando voce digita a palavra batata (palavra secreta) voce aciona o break oque encerra o loop
-#quando voce nao acerta a palavra secreta o numero de chances/contador acaba oque fqaz o while sr verdadeir 
